@@ -1,0 +1,44 @@
+<div>
+  <h1 class="red-text">
+    Read Text
+  </h1>
+  <hr />
+  <!-- Dynamic Route -->
+  @if (idText != null) {
+  <p>{{idText}}</p>
+  }
+  @else {
+  <p>No Param</p>
+  }
+  <!-- Render Data -->
+  <hr />
+  @for(num of array; track num) {
+  <p>{{num}}</p>
+  }
+</div>
+<hr />
+<!-- Render Data CommonModule -->
+<p *ngIf="false; else elseBlock">
+  don't show this
+</p>
+<ng-template #elseBlock>
+  <p>
+    show this
+  </p>
+</ng-template>
+
+<ng-container *ngFor="let num of arraySample">
+  <p>
+    {{num}}
+  </p>
+</ng-container>
+<hr />
+<!-- การรับค่าจาก <Input> Event -->
+<p>-- Result: Integer --</p>
+<input (keyup)="onKey($event)">
+<p>testInput = {{testInput}}</p>
+<hr />
+<!-- การรับค่าจาก <Input> FormsModule -->
+<p>-- Result: String --</p>
+<input [(ngModel)]="testInputStr">
+<p>testInputStr = {{testInputStr}}</p>
