@@ -1,0 +1,30 @@
+<div class="table-responsive m-3">
+  <table
+    class="table table-sm table-striped text-center table-bordered border table-hover"
+  >
+    <thead class="table-light">
+      <tr>
+        <th>Book title</th>
+        <th>Book price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of AllBook">
+        <td>{{ book.title }}</td>
+        <td>{{ book.price }}</td>
+        <td>
+          <button
+            routerLink="test_path"
+            class="btn btn-sm btn-light border"
+            Button
+          >
+            Edit
+          </button>
+          &nbsp;
+          <button class="btn btn-sm btn-light border">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
