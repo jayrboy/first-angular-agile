@@ -1,0 +1,30 @@
+<div class="card shadow mx-auto rounded mt-3" [style.width.px]="300">
+  <div class="card-header">Create Book</div>
+  <form (submit)="onSubmit()" class="p-3">
+    <div class="row">
+      <div class="col-12">
+        <label>Book title:</label>
+        <input
+          class="form-control form-control-sm"
+          type="text"
+          [(ngModel)]="book.title"
+          name="title"
+          required
+        />
+      </div>
+      <div class="col-12">
+        <label>Book price:</label>
+        <input
+          class="form-control form-control-sm"
+          type="number"
+          [(ngModel)]="book.price"
+          name="price"
+          required
+        />
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <button type="submit" class="btn btn-sm btn-light border">Submit</button>
+    </div>
+  </form>
+</div>
