@@ -52,5 +52,16 @@
   </div>
 </nav>
 <div class="container">
+  <app-booklist></app-booklist>
+  <div class="text-center mt-3">
+    <button routerLink="" class="btn btn-sm btn-light border" Button>
+      Home
+    </button>
+    &nbsp;
+    <button routerLink="create_book" class="btn btn-sm btn-light border" Button>
+      Add Book
+    </button>
+  </div>
   <router-outlet />
+  <uploadImage-component></uploadImage-component>
 </div>
