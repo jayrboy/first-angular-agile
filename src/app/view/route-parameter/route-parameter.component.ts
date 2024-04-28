@@ -1,16 +1,12 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'new-component',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, FormsModule],
-  templateUrl: './newcomponent.component.html',
-  styleUrls: ['./newcomponent.component.css'],
+  selector: 'app-route-parameter',
+  templateUrl: './route-parameter.component.html',
+  styleUrls: ['./route-parameter.component.css'],
 })
-export class NewComponent {
+export class RouteParameterComponent {
   idText: string | null | undefined;
 
   constructor(private route: ActivatedRoute) {}

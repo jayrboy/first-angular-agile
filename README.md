@@ -33,11 +33,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - https://angular.io/guide/setup-local
 
 ```sh
+npm -v
 npm install -g @angular/cli
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
 
 ```sh
+ng --version
 ng new my-app
 cd my-app
 ng serve --open

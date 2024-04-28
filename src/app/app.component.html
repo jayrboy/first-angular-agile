@@ -1,2 +1,56 @@
-<new-component></new-component>
-<router-outlet />
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Angular</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li>
+          <button class="btn btn-sm btn-light border" routerLink="">
+            home
+          </button>
+        </li>
+        &nbsp;
+        <li>
+          <button class="btn btn-sm btn-light border" routerLink="test_path">
+            path
+          </button>
+        </li>
+        &nbsp;
+        <li>
+          <button
+            class="btn btn-sm btn-light border"
+            routerLink="test_path/123"
+          >
+            path/123
+          </button>
+        </li>
+        &nbsp;
+        <li>
+          <button class="btn btn-sm btn-light border" routerLink="render_data">
+            render data
+          </button>
+        </li>
+        &nbsp;
+        <li>
+          <button class="btn btn-sm btn-light border" routerLink="input">
+            input
+          </button>
+        </li>
+        &nbsp;
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet />
+</div>

@@ -4,19 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'new-component',
+  selector: 'app-input',
   standalone: true,
   imports: [CommonModule, RouterOutlet, FormsModule],
-  templateUrl: './newcomponent.component.html',
-  styleUrls: ['./newcomponent.component.css'],
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.css'],
 })
-export class NewComponent {
-  idText: string | null | undefined;
-
+export class InputComponent {
   constructor(private route: ActivatedRoute) {}
 
-  ngOnInit(): void {
-    this.idText = this.route.snapshot.paramMap.get('id');
-    console.log(this.idText);
+  ngOnInit() {}
+
+  testInput = '';
+  testInputStr = '';
+  onKey(event: any) {
+    this.testInput = event.target?.value;
   }
 }

@@ -1,0 +1,31 @@
+<!-- Render Data -->
+<div class="row mt-3">
+  <div class="col-12 col-sm-4">
+    <h3>for loop</h3>
+    <div class="card p-3 text-center mt-3">
+      @for(num of array; track num) {
+      <p>{{ num }}</p>
+      }
+    </div>
+  </div>
+  <div class="col-12 col-sm-4">
+    <!-- Render Data CommonModule -->
+    <h3>if else</h3>
+    <div class="card p-3 text-center mt-3">
+      <p *ngIf="false; else elseBlock">don't show this</p>
+      <ng-template #elseBlock>
+        <p>show this</p>
+      </ng-template>
+    </div>
+  </div>
+  <div class="col-12 col-sm-4">
+    <h3>*ngFor</h3>
+    <div class="card p-3 text-center mt-3">
+      <ng-container *ngFor="let num of arraySample">
+        <p>
+          {{ num }}
+        </p>
+      </ng-container>
+    </div>
+  </div>
+</div>

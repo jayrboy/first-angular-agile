@@ -1,0 +1,27 @@
+<!-- การรับค่าจาก <Input> Event -->
+<div class="row mt-3">
+  <div class="col-6 col-lg-6">
+    <div class="card p-3 text-center mt-3">
+      <p>-- Result: <code>Integer</code> --</p>
+      <input
+        type="number"
+        (keyup)="onKey($event)"
+        class="form-control form-control-sm"
+        placeholder="กรุณากรอกตัวเลข"
+      />
+      <p>testInput = {{ testInput }}</p>
+    </div>
+  </div>
+  <div class="col-6 col-lg-6">
+    <div class="card p-3 text-center mt-3">
+      <p>-- Result: <code>String</code> --</p>
+      <input
+        type="text"
+        [(ngModel)]="testInputStr"
+        class="form-control form-control-sm"
+        placeholder="กรุณากรอกข้อความ"
+      />
+      <p>testInputStr = {{ testInputStr }}</p>
+    </div>
+  </div>
+</div>
