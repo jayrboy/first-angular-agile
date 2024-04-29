@@ -2,16 +2,18 @@ import { Component } from '@angular/core';
 import Book from '../../models/book.model';
 import { BookService } from '../../services/book.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-booklist',
   standalone: true,
   templateUrl: './booklist.component.html',
   styleUrls: ['./booklist.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class BookListComponent {
   AllBook: Book[] = [];
+  idBook: string | null | undefined;
 
   constructor(private bookService: BookService) {}
 

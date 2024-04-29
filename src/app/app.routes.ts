@@ -4,6 +4,7 @@ import { RouteParameterComponent } from './view/route-parameter/route-parameter.
 import { RenderDataComponent } from './view/render-data/render-data.component';
 import { InputComponent } from './view/input/input.component';
 import { BookCreateComponent } from './view/bookcreate/bookcreate.component';
+import { BookUpdateComponent } from './view/bookupdate/bookupdate.component';
 
 export const routes: Routes = [
   { path: 'test_path', component: NewComponent },
@@ -11,4 +12,5 @@ export const routes: Routes = [
   { path: 'render_data', component: RenderDataComponent },
   { path: 'input', component: InputComponent },
   { path: 'create_book', component: BookCreateComponent },
+  { path: 'update_book/:id', component: BookUpdateComponent },
 ];

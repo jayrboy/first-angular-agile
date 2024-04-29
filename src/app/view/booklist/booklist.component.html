@@ -1,8 +1,6 @@
 <!-- Table Books -->
 <div class="table-responsive m-3">
-  <table
-    class="table table-sm table-striped text-center table-bordered border table-hover"
-  >
+  <table class="table table-sm table-striped text-center table-bordered border table-hover">
     <thead class="table-light">
       <tr>
         <th>Book title</th>
@@ -15,11 +13,7 @@
         <td>{{ book.title }}</td>
         <td>{{ book.price }}</td>
         <td>
-          <button
-            routerLink="create_book"
-            class="btn btn-sm btn-light border"
-            Button
-          >
+          <button routerLink="update_book/{{book.id}}" class="btn btn-sm btn-light border" Button>
             Edit
           </button>
           &nbsp;
