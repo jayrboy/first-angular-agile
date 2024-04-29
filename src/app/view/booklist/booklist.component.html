@@ -3,6 +3,7 @@
   <table class="table table-sm table-striped text-center table-bordered border table-hover">
     <thead class="table-light">
       <tr>
+        <th>ID</th>
         <th>Book title</th>
         <th>Book price</th>
         <th>Action</th>
@@ -10,6 +11,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let book of AllBook">
+        <td>{{ book.id }}</td>
         <td>{{ book.title }}</td>
         <td>{{ book.price }}</td>
         <td>
