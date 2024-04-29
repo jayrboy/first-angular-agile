@@ -1,46 +1,44 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <span class="navbar-brand"><img src="../../../assets/ng-icon.png" alt="logo" width="40px">&nbsp;Angular</span>
+    <a class="navbar-brand fw-bold" routerLink=""><img src="../../../assets/ng-icon.png" alt="logo"
+        width="35px">&nbsp;Angular</a>
+    &nbsp;
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li>
-          <button class="btn btn-sm btn-light border" routerLink="">
+    <div class="collapse navbar-collapse text-capitalize" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="">
             home
-          </button>
+          </a>
         </li>
-        &nbsp;
-        <li>
-          <button class="btn btn-sm btn-light border" routerLink="test_path">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="test_path">
             path
-          </button>
+          </a>
         </li>
-        &nbsp;
-        <li>
-          <button class="btn btn-sm btn-light border" routerLink="test_path/123">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="test_path/123">
             path/123
-          </button>
+          </a>
         </li>
-        &nbsp;
-        <li>
-          <button class="btn btn-sm btn-light border" routerLink="render_data">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="render_data">
             render data
-          </button>
+          </a>
         </li>
-        &nbsp;
-        <li>
-          <button class="btn btn-sm btn-light border" routerLink="input">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="input">
             input
-          </button>
+          </a>
         </li>
-        &nbsp;
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search"
+          style="width:150px">
+        <button class="btn btn-sm btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>

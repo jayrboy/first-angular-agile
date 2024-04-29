@@ -27,4 +27,18 @@ export class BookListComponent {
       }
     );
   }
+
+  onClickDelete(bookId: number) {
+    const confirmDelete = confirm('ยืนยันลบรายการนี้?');
+    if (confirmDelete) {
+      this.bookService.delete(bookId).subscribe(
+        (result) => {
+          this.AllBook = this.AllBook.filter((book) => book.id !== bookId);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    }
+  }
 }
