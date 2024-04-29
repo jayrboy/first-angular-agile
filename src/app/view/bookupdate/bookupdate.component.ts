@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import Book from '../../models/book.model';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-bookupdate',
@@ -32,9 +33,23 @@ export class BookUpdateComponent {
   }
 
   ngOnInit(): void {
-    this.idBook = this.route.snapshot.paramMap.get('id') ?? '0';
-    this.onReadBook();
-    // console.log(this.idBook);
+    // Subscribe กับ paramMap ของ ActivatedRoute เพื่อติดตามการเปลี่ยนแปลงของ URL params
+    this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap) => {
+          this.idBook = params.get('id') ?? '0';
+          return this.bookService.getBook(this.idBook);
+        })
+      )
+      .subscribe(
+        // ผลลัพธ์ที่ได้รับจาก getBook(id)
+        (result) => {
+          this.book = result;
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
   }
 
   onSubmit() {

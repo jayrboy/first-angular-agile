@@ -3,6 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { BookListComponent } from './view/booklist/booklist.component';
 import { UploadImageComponent } from './view/uploadimage/uploadimage.component';
 import { NavbarComponent } from './view/navbar/navbar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { NavbarComponent } from './view/navbar/navbar.component';
     NavbarComponent,
     BookListComponent,
     UploadImageComponent,
+    MatIconModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
