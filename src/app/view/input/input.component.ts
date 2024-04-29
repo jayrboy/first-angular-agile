@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
@@ -11,13 +11,27 @@ import { ActivatedRoute, RouterOutlet } from '@angular/router';
   styleUrls: ['./input.component.css'],
 })
 export class InputComponent {
+  @Output() strContext = new EventEmitter<string>();
+
+  testInput = '';
+  testInputStr = '';
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {}
 
-  testInput = '';
-  testInputStr = '';
   onKey(event: any) {
     this.testInput = event.target?.value;
+    this.strContext.emit(this.testInput);
+  }
+
+  onSubmitForm1() {
+    console.log('Test Input:', this.testInput);
+    this.strContext.emit(this.testInput);
+  }
+
+  onSubmitForm2() {
+    console.log('Test Input String:', this.testInputStr);
+    this.strContext.emit(this.testInputStr);
   }
 }

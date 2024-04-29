@@ -1,27 +1,24 @@
-<!-- การรับค่าจาก <Input> Event -->
 <div class="row mt-3">
   <div class="col-6 col-lg-6">
     <div class="card p-3 text-center mt-3">
       <p>-- Result: <code>Integer</code> --</p>
-      <input
-        type="number"
-        (keyup)="onKey($event)"
-        class="form-control form-control-sm"
-        placeholder="กรุณากรอกตัวเลข"
-      />
-      <p>testInput = {{ testInput }}</p>
+      <!-- <p>ตัวเลข : {{testInput}}</p> -->
+      <input type="number" class="form-control form-control-sm" placeholder="กรุณากรอกตัวเลข" (keyup)="onKey($event)" />
+      <!-- <button class="btn btn-primary mt-2" (click)="onSubmitForm1()">Submit</button> -->
     </div>
   </div>
   <div class="col-6 col-lg-6">
     <div class="card p-3 text-center mt-3">
       <p>-- Result: <code>String</code> --</p>
-      <input
-        type="text"
-        [(ngModel)]="testInputStr"
-        class="form-control form-control-sm"
-        placeholder="กรุณากรอกข้อความ"
-      />
-      <p>testInputStr = {{ testInputStr }}</p>
+      <!-- <p>ข้อความ : {{testInputStr}}</p> -->
+      <input type="text" [(ngModel)]="testInputStr" class="form-control form-control-sm" placeholder="กรุณากรอกข้อความ"
+        (keyup)="onKey($event)" />
+      <!-- <button class="btn btn-primary mt-2" (click)="onSubmitForm2()">Submit</button> -->
     </div>
   </div>
+</div>
+
+<div class="card mt-3 p-3 text-center shadow">
+  <p>ส่งค่าผ Component</p>
+  <h4>{{strContext | async}}</h4>
 </div>
